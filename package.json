@@ -1,0 +1,24 @@
+{
+  "name": "tiny-md",
+  "version": "1.0.0",
+  "description": "A lightweight, streaming CommonMark parser.",
+  "type": "module",
+  "source": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "parcel example/index.html",
+    "build": "parcel build --no-source-maps --detailed-report",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown",
+    "parser",
+    "streaming",
+    "commonmark"
+  ],
+  "author": "sajith.rahim",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
