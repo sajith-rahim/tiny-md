@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "A lightweight, streaming CommonMark parser.",
   "type": "module",
-  "source": "index.js",
-  "main": "dist/index.js",
   "scripts": {
-    "start": "parcel example/index.html",
-    "build": "parcel build --no-source-maps --detailed-report",
+    "start": "rm -rf dist && parcel --target app",
+    "build": "rm -rf dist &&parcel build --target lib --no-source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,5 +18,18 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.16.4"
+  },
+  "targets": {
+    "lib": {
+      "source": "index.js",
+      "context": "browser",
+      "outputFormat": "esmodule",
+      "distDir": "dist",
+      "isLibrary": true
+    },
+    "app": {
+      "source": "example/index.html",
+      "distDir": "dist-example"
+    }
   }
 }
