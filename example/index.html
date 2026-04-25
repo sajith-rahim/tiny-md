@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinyMD - Streaming Markdown Parser</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>TinyMD</h1>
+      <p>A lightweight, streaming CommonMark parser.</p>
+    </header>
+
+    <main>
+      <div class="controls">
+        <button id="btn-bulk" class="active">Bulk Parse</button>
+        <button id="btn-stream">Simulate Stream Parse</button>
+      </div>
+
+      <div class="editor-layout">
+        <div class="pane input-pane">
+          <div class="pane-header">Input (Markdown)</div>
+          <textarea id="md-input" placeholder="Type markdown here..."></textarea>
+        </div>
+        <div class="pane output-pane">
+          <div class="pane-header">Output (Preview)</div>
+          <div id="md-output" class="markdown-body"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script type="module" src="main.js"></script>
+</body>
+</html>
